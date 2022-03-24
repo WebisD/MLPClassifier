@@ -65,7 +65,7 @@ def main():
     original_classifier = MLPClassifier(hidden_layer_sizes=(100, 100, 50, 160), activation="relu", alpha=1, max_iter=8000)
     plot_classifier(original_classifier, original_features, target, subplotPosition=2)
 
-    # using PCA
+    # with PCA
     pca_features = reduce_dimensions_with_cpa(original_features, target, desiredDimension=2, subplotPosition=3)
 
     pca_classifier = MLPClassifier(hidden_layer_sizes=(100, 50, 100, 100), alpha=1, max_iter=7500)
